@@ -10,6 +10,7 @@ is private; this repo hosts the signed, notarized builds.
 
 ```sh
 brew tap recombix/tap
+brew trust recombix/tap   # newer Homebrew requires trusting third-party taps
 brew install --cask switchboard
 ```
 
