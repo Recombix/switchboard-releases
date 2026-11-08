@@ -42,25 +42,31 @@ answer a question, file issues, review a PR, or start blank on any PR's branch.
 which are asking you something, which are blocked, and which have finished and
 want reviewing. See each agent's subagents and to-do list, what each task has
 cost, and how much of your Claude and Codex usage is left, right in the menu bar.
+One shortcut jumps to the next task that needs you, and the status bar counts
+how many are waiting.
 
 **From issue to merged PR.** Start a task from a GitHub or GitLab issue, or a
 batch of them. Give a task a queue of issues and it works through them one PR at
 a time. Set up a Dispatcher and labelled issues turn into running tasks on their
-own, held back by queue and usage limits. An agent can even hand queued issues
-to fresh tasks that run beside it.
+own, held back by queue and usage limits. Schedules start recurring work at the
+time you choose, and only a run with something to report asks for your
+attention. An agent can even hand queued issues to fresh tasks that run beside
+it.
 
 **Pull requests that look after themselves.** Choose Draft Only, Manual Merge,
 or Auto Merge for the whole app, a project, or one task. The Work tab shows each
 task's issues, PRs, review threads, and CI checks, with a countdown to green.
 Conflicts and stale branches come with a one-click rebase, and a failed merge
-goes straight to the agent to fix.
+goes straight to the agent to fix. Turn on Auto Fix and an idle task starts its
+own Fix CI or review round, then stops after three in a row so it never loops.
 
 **Review in both directions.** Select text in a diff, a file, or a document, or
 pin a comment to a point on an image, and send it all to the agent as one
 review. Approve a spec or pick between proposed options with buttons under the
 document. Point a review agent at any PR and it checks the diff, threads, CI,
 dependencies, security, and your repo's `principles.md`, then posts its findings
-if you allow it.
+if you allow it. The Changes tab remembers which files you have viewed, so
+Changes Since Viewed shows only what is new.
 
 **See the work, not a transcript.** Agents open their plans, screenshots, PDFs,
 and live previews as tabs beside the session. Markdown renders with diagrams,
@@ -70,7 +76,9 @@ focus mode, find, and PDF export.
 and every new worktree sets itself up the same way: install commands, the
 `.env` files git never tracked, dev-server tabs already running, the
 architecture doc already open, plus the project's merge mode, branch prefix,
-and thinking effort.
+and thinking effort. Run commands put Run, Stop, Restart, and Open Preview for
+each dev server in the tab bar, and every task gets its own block of ports, so
+parallel worktrees never fight over `localhost:3000`.
 
 **Agents that know where they are.** Switchboard hands each session its own MCP
 tools and built-in skills, so an agent can look up its task and pull request,
