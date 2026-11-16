@@ -66,7 +66,8 @@ review. Approve a spec or pick between proposed options with buttons under the
 document. Point a review agent at any PR and it checks the diff, threads, CI,
 dependencies, security, and your repo's `principles.md`, then posts its findings
 if you allow it. The Changes tab remembers which files you have viewed, so
-Changes Since Viewed shows only what is new.
+Changes Since Viewed shows only what is new. Review Cadence lets you decide
+when an agent stops for your review, or leave that call to the agent.
 
 🖼️ **See the work, not a transcript.** Agents open their plans, screenshots, PDFs,
 and live previews as tabs beside the session. Markdown renders with diagrams,
@@ -85,6 +86,10 @@ tools and built-in skills, so an agent can look up its task and pull request,
 see what its siblings are touching, message other tasks, ask for a review, and
 show you its work, instead of guessing from the branch name.
 
+🔐 **Secrets that stay out of the chat.** When an agent needs an API key or
+another secret, it asks through a secure Secrets form. The value goes to a
+private file and never appears in the conversation.
+
 🌐 **Run it somewhere else.** Send a task to a remote SSH host, Tailscale
 included. The agent runs in tmux so a dropped connection never kills it, and
 diffs and previews stream back to your Mac. A running task can move there in
@@ -92,8 +97,10 @@ place.
 
 ☕ **Built for long days.** Switchboard keeps your Mac awake while agents work,
 with a battery floor. A Work Report sums up what you shipped today or this week.
-A command palette reaches almost everything, a hotkey terminal drops down over
-any app, and `switchboard://new-task` links start a task from a script or doc.
+A command palette reaches almost everything, Back and Forward retrace your
+steps in each window, and one window lists every keyboard shortcut. A hotkey
+terminal drops down over any app, and `switchboard://new-task` links start a
+task from a script or doc.
 
 ## 📦 Install
 
