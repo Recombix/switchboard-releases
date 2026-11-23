@@ -50,19 +50,20 @@ batch of them. Give a task a queue of issues and it works through them one PR at
 a time. Set up a Dispatcher and labelled issues turn into running tasks on their
 own, held back by queue and usage limits. Schedules start recurring work at the
 time you choose, and only a run with something to report asks for your
-attention. An agent can even hand queued issues to fresh tasks that run beside
-it.
+attention. An agent can even hand an ordered queue of issues to a fresh task
+that runs beside it.
 
 🔀 **Pull requests that look after themselves.** Choose Draft Only, Manual Merge,
 or Auto Merge for the whole app, a project, or one task. The Work tab shows each
 task's issues, PRs, review threads, and CI checks, with a countdown to green.
-Conflicts and stale branches come with a one-click rebase, and a failed merge
-goes straight to the agent to fix. Turn on Auto Fix and an idle task starts its
+A conflicted branch gets a one-click rebase, a PR that has fallen behind gets an
+Update button, and a failed merge goes straight to the agent to fix. Turn on Auto Fix and an idle task starts its
 own Fix CI or review round, then stops after three in a row so it never loops.
 
 💬 **Review in both directions.** Select text in a diff, a file, or a document, or
 pin a comment to a point on an image, and send it all to the agent as one
-review. Approve a spec or pick between proposed options with buttons under the
+review. Select a line the agent wrote and choose Reply to Agent to answer it
+with the text quoted. Approve a spec or pick between proposed options with buttons under the
 document. Point a review agent at any PR and it checks the diff, threads, CI,
 dependencies, security, and your repo's `principles.md`, then posts its findings
 if you allow it. The Changes tab remembers which files you have viewed, so
@@ -70,8 +71,16 @@ Changes Since Viewed shows only what is new. Review Cadence lets you decide
 when an agent stops for your review, or leave that call to the agent.
 
 🖼️ **See the work, not a transcript.** Agents open their plans, screenshots, PDFs,
-and live previews as tabs beside the session. Markdown renders with diagrams,
-focus mode, find, and PDF export.
+and live previews as tabs beside the session, and add Mermaid diagrams and
+charts where a picture makes the point. Markdown renders with focus mode, find,
+text zoom, and PDF export. Split any pane on any edge to keep it all in view.
+
+✍️ **Edit beside the agent.** Any text file in a worktree opens in an Editor tab
+that saves as you type and merges the agent's changes with yours. Switch to
+Suggesting and you and the agent propose edits to each other as tracked text,
+so nothing reaches the file until the other side accepts it. Markdown edits in
+a rendered form, with a format bar, pictures and diagrams in place, and table
+cells you edit directly.
 
 ⚙️ **Worktrees that arrive ready.** Drop a `.switchboard/config.json` in your repo
 and every new worktree sets itself up the same way: install commands, the
@@ -86,8 +95,8 @@ tools and built-in skills, so an agent can look up its task and pull request,
 see what its siblings are touching, message other tasks, ask for a review, and
 show you its work, instead of guessing from the branch name.
 
-🔐 **Secrets that stay out of the chat.** When an agent needs an API key or
-another secret, it asks through a secure Secrets form. The value goes to a
+🔐 **Secrets that stay out of the chat.** When an agent needs an API key, a
+certificate, or another secret, it asks through a secure Secrets form. The value goes to a
 private file and never appears in the conversation.
 
 🌐 **Run it somewhere else.** Send a task to a remote SSH host, Tailscale
